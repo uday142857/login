@@ -12,7 +12,7 @@ function SignUp() {
   });
   var sendData = () => {
     axios
-      .post("http://localhost:9191/newuser", state)
+      .post("https://login-s7g3.onrender.com/newuser", state)
       .then((res) => {
         if (res.data.status === false) {
           alert("User alredy Existed");
