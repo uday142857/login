@@ -7,7 +7,7 @@ function Home() {
   var [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:9191/userdata", {
+      .get("https://login-s7g3.onrender.com/userdata", {
         headers: {
           Authorization: `bearer ${localStorage.getItem("token")}`,
         },
@@ -28,10 +28,10 @@ function Home() {
   }, []);
   const removeuser = (id) => {
     axios
-      .delete(`http://localhost:9191/removeuser/${id}`)
+      .delete(`https://login-s7g3.onrender.com/removeuser/${id}`)
       .then(() => {
         axios
-          .get("http://localhost:9191/userdata", {
+          .get("https://login-s7g3.onrender.com/userdata", {
             headers: {
               Authorization: `bearer ${localStorage.getItem("token")}`,
             },
