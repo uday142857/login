@@ -14,7 +14,7 @@ function Update() {
     })
     
     useEffect(()=>{
-        axios.get(`http://localhost:9191/getoneuser/${id}`).then((res)=>{
+        axios.get(`https://login-s7g3.onrender.com/getoneuser/${id}`).then((res)=>{
             console.log(res.data.message)
             setState(res.data.message)
         }).catch((err)=>{
