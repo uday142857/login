@@ -11,7 +11,7 @@ function Login() {
   });
 
   const login = ()=>{
-    axios.post("http://localhost:9191/auth/login",user).then((res)=>{
+    axios.post("https://login-s7g3.onrender.com/auth/login",user).then((res)=>{
       if(res.data.ok === true){
          console.log(res.data.token);
          localStorage.setItem("token",res.data.token)
